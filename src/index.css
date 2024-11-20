@@ -6,8 +6,12 @@
     font-family: Onest;
     src: url('assets/fonts/Onest/Onest-VariableFont_wght.ttf');
 }
+@font-face {
+    font-family: Baleny;
+    src: url('assets/fonts/Baleny\ Script/baleny-baleny-regular-script-400.ttf');
+}
 
 body{
     font-family: Onest;
-    
+
 }
