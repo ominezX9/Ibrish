@@ -1,14 +1,14 @@
 import { Suspense } from "react"
 import { Outlet } from "react-router-dom";
 import MenuBar from "@components/menu-bar";
-import Header from "@components/shared/header";
+// import Header from "@components/shared/header";
 
 export default function DefaultLayout() {
     return (
         <div className="flex overflow-hidden h-[100vh] w-full">
             <MenuBar />
             <div className="w-full">
-                <Header />
+                {/* <Header /> */}
                 <main className="h-full">
                     <Suspense
                         fallback={
