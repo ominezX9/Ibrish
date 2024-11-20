@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
+import { useState, useEffect } from "react";
+import useDeviceType from "@utils/get-device-type";
 export default function Navbar() {
   const deviceType = useDeviceType();
   const options = [
