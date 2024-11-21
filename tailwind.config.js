@@ -12,12 +12,15 @@ export default {
       xl: '1440px',
     },
     colors:{
-      primary: '#B87333', //copper
-      secondary: '#708238', //Olive Green
+      primary: '#708238', //Olive Green
+      secondary: '#B87333', //copper
       cream: '#F5F5DC', //Off-white
       grey: '#E8E8E8',
       lightgrey: '#828282',
       darkgray: '#2F2F2F',
+      lightblack: '#25170b',
+      black: '#000000',
+      white: '#FFFFFF',
       transparent: "transparent",
     },
     extend: {},
