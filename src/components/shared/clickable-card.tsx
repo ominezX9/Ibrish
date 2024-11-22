@@ -18,7 +18,7 @@ export default function ClickableCard({
     return (
         <Link to={link} className="card basis-[23%]">
             <div className="card-image relative bg-lightgrey rounded-lg overflow-hidden">
-                <div className="inline-block tracking-wide absolute text-white py-2 px-5 price-tag bg-primary rounded-full top-5 left-3">
+                <div className="inline-block tracking-wide absolute text-white text-sm py-2 px-5 price-tag bg-primary rounded-full top-5 left-3">
                     &#x20A6;{CurrencyFormatter(price)}/Month
                 </div>
                 <img src={image} alt="product_image" />

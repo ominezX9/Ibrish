@@ -5,7 +5,7 @@ import Button from "@components/shared/button";
 
 export default function MenuBar() {
   return (
-    <div className="flex flex-row justify-between items-center py-5 px-10 w-full">
+    <div className="flex flex-row justify-between items-center py-5 px-[50px] w-full">
       <div className="logo">
         <Link to="/">Logo</Link>
       </div>

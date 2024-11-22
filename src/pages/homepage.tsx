@@ -5,9 +5,11 @@ import { CountDetails } from "@services/api";
 import ItemAndCount from "@components/shared/item-and-count";
 import OurExpertise from "./parts/our-expertise";
 import DiscoverSpaces from './parts/discover-spaces'
+import Panorama from "./parts/panorama";
+
 export default function Homepage() {
   return (
-    <div className="py-5 px-10">
+    <div className="py-5 px-[50px]">
       <div className="mb-10">
         <Jumbotron
           children={
@@ -68,7 +70,8 @@ export default function Homepage() {
       <OurExpertise/>
 
       <DiscoverSpaces/>
-    
+
+      <Panorama/>
     
     </div>
   )
