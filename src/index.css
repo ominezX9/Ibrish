@@ -13,5 +13,10 @@
 
 body{
     font-family: Onest;
+}
 
+@layer{
+    .text-baleny{
+        font-family: Baleny;
+    }
 }
