@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ReactPannellum from "react-pannellum";
 import Image1 from "@assets/images/shot-panoramic-composition-living-room.jpg";
 import Image2 from "@assets/images/luxury-kitchen-modern-building-elegant-shiny-generated.jpg";
