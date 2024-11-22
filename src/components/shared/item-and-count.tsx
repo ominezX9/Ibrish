@@ -1,5 +1,5 @@
 import AnimatedNumber from "react-animated-numbers";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ItemAndCountProps = {
     count?: number;
@@ -10,14 +10,17 @@ export default function ItemAndCount({
     count = 0,
     title = ""
 }: ItemAndCountProps) {
-    const [number] = useState(count);
+    const [number, setNumber] = useState(count);
+    useEffect(() => {
+        setNumber(count);
+    }, [count])
     return (
         <div className="flex flex-col items-center">
             <div className="flex flex-row text-3xl items-center font-bold ">
-                <div>
+                <div className="flex-none">
                     <AnimatedNumber
-                        className="flex-none"
-                        fontStyle={{ fontFamily: "Onest", fontSize: 35, fontWeight: "bold", wordSpacing: 1 }}
+                        
+                        fontStyle={{ fontFamily: "Onest", fontSize: 35, fontWeight: "bold", wordSpacing: 2 }}
                         animateToNumber={number}
                         transitions={(index) => ({
                             type: "spring",
@@ -26,7 +29,7 @@ export default function ItemAndCount({
                         includeComma
                     />
                 </div>
-                <div>+</div>
+                <div className="flex-none">+</div>
             </div>
 
             <p className="text-sm">

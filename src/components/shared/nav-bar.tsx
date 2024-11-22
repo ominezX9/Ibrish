@@ -4,15 +4,16 @@ import useDeviceType from "@utils/get-device-type";
 export default function Navbar() {
   const deviceType = useDeviceType();
   const options = [
-    "dashboard",
-    "more",
-    "profile",
-    "logout"
+    "Home",
+    "Services",
+    "About Us",
+    "Property",
+    "Contact"
   ]
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className={`absolute bg-white z-[20] ${deviceType === "phone" ? "bottom-0 left-0 right-0" : "left-0 bottom-0 top-0"}`}>
+    <div className={`bg-white z-[20] ${deviceType === "phone" ? "absolute bottom-0 left-0 top-0 " : ""}`}>
       {
         deviceType === "phone" ? (
           <div>
@@ -20,7 +21,7 @@ export default function Navbar() {
               {
                 options.map((item, i) => (
                   <Link
-                    className={`${item === "logout" ? 'hover:!text-[tomato] hover:!border-[tomato]' : ''} text-gray hover:text-secondary border-2 border-transparent hover:border-secondary transition-all rounded-lg flex-none flex items-center justify-center shadow w-[40px] h-[40px] p-2 ${selected == i ? "!text-secondary !border-secondary" : ""}`}
+                    className={`text-gray hover:text-secondary border-2 border-transparent hover:border-secondary transition-all rounded-lg flex-none flex items-center justify-center shadow w-[40px] h-[40px] p-2 ${selected == i ? "!text-secondary !border-secondary" : ""}`}
                     key={i}
                     to={`/${item}`}>
                     {item}
@@ -30,14 +31,14 @@ export default function Navbar() {
             </ul>
           </div>
         ) : (
-          <div className="h-full">
-            <ul className="flex flex-col gap-5 p-5 shadow h-full">
+          <div className="bg-white">
+            <ul className="flex gap-3">
               {
                 options.map((item, i) => (
                   <Link
-                    className={`${item === "logout" ? 'hover:!text-[tomato] hover:!border-[tomato]' : ''} text-gray hover:text-secondary border-2 border-transparent hover:border-secondary transition-all h-[50px] w-[50px] flex-none flex items-center justify-center rounded-lg p-3 ${selected == i ? "!text-secondary !border-secondary" : ""}`}
+                    className={`text-gray hover:text-primary hover:border-secondary transition-all flex-none flex items-center justify-center px-2 py-1 ${selected == i ? "!text-white bg-primary" : ""}`}
                     key={i}
-                    to={`/${item}`}
+                    to={`/${item.toLowerCase().replace(" ", "-")}`}
                     onClick={() => { setSelected(i) }}>
                     {item}
 
