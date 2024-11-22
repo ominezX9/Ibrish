@@ -16,9 +16,9 @@ export default function ClickableCard({
     link
 } : ClickableCardProps) {
     return (
-        <Link to={link} className="card basis-1/4">
+        <Link to={link} className="card basis-[23%]">
             <div className="card-image relative bg-lightgrey rounded-lg overflow-hidden">
-                <div className="inline absolute text-white py-2 px-5 price-tag bg-primary rounded-full top-5 left-3">
+                <div className="inline-block tracking-wide absolute text-white py-2 px-5 price-tag bg-primary rounded-full top-5 left-3">
                     &#x20A6;{CurrencyFormatter(price)}/Month
                 </div>
                 <img src={image} alt="product_image" />
@@ -27,7 +27,7 @@ export default function ClickableCard({
                 <h3 className="text-lg font-bold py-2">
                     {title}
                 </h3>
-                <p className="text-sm pr-3">
+                <p className="text-sm pb-2">
                     {description}
                 </p>
             </div>
