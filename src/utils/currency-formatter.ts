@@ -1,4 +1,4 @@
-export default function CurrecyFormatter(num : number) {
+export default function CurrencyFormatter(num : number) {
     if (num >= 1e6) {
         return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M'; // 1M+
     } else if (num >= 1e3) {
