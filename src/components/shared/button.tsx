@@ -22,7 +22,7 @@ export default function Button({
   enableGlassEffect = false,
 }: ButtonProps){
   // Base styles
-  const baseStyles = `${roundedFull ? '!rounded-full' : ''} ${enableGlassEffect ? "backdrop-blur-xl" : ""} inline-flex items-center justify-center font-medium rounded focus:outline-none focus:ring disabled:opacity-50 disabled:cursor-not-allowed`;
+  const baseStyles = `${roundedFull ? '!rounded-full' : ''} ${enableGlassEffect ? "!bg-primary/50 backdrop-blur-sm hover:!bg-primary/90" : ""} inline-flex items-center justify-center font-medium rounded focus:outline-none focus:ring disabled:opacity-50 disabled:cursor-not-allowed`;
 
   // Variants
   const variantStyles = {

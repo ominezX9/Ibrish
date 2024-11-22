@@ -4,7 +4,7 @@ export default function OurExpertise() {
   return (
     <div className="flex flex-row justify-between pb-10 mb-10">
           <div className="flex flex-col basis-[47%] flex-none">
-            <Jumbotron className="h-full" children={undefined}/>
+            <Jumbotron className="h-[400px]" children={undefined}/>
             <div>
               <h3 className="text-md text-primary tracking-widest py-5">
                 OUR EXPERTISE

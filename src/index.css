@@ -6,25 +6,50 @@
     font-family: Onest;
     src: url('assets/fonts/Onest/Onest-VariableFont_wght.ttf');
 }
+
 @font-face {
     font-family: Baleny;
     src: url('assets/fonts/Baleny\ Script/baleny-baleny-regular-script-400.ttf');
 }
 
-body{
+body {
     font-family: Onest;
 }
 
-@layer{
-    .text-baleny{
+@layer {
+    img{
+        width: 100%;
+    }
+    .text-baleny {
         font-family: Baleny;
     }
-    #panorama{
+
+    #panorama {
         width: 100% !important;
         height: 100% !important;
 
     }
-    #panorama .pnlm-controls-container{
+
+    #panorama .pnlm-controls-container {
         display: none;
     }
+
+    @media (min-width: 1024px) {
+
+        /* Apply styles for screens larger than 1024px */
+        .slick-slide {
+            margin: 0 5px;
+            /* Adjust gap between slides */
+        }
+
+        .slick-list {
+            margin: 0 -5px;
+            /* Avoid extra margin on the sides */
+        }
+    }
+
+
+
+
+
 }

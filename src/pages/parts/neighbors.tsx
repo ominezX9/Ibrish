@@ -1,3 +1,4 @@
+import TestimonialSlider from "@components/shared/testimonial-slider";
 
 
 export default function Neighbors() {
@@ -7,6 +8,9 @@ export default function Neighbors() {
                 Meet the Neighbors - Discover Stories <br />
                 from Our Happy Residents
             </h1>
+            <div className="overflow-hidden">
+                <TestimonialSlider />
+            </div>
         </div>
     )
 }
