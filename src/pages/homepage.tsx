@@ -6,6 +6,7 @@ import ItemAndCount from "@components/shared/item-and-count";
 import OurExpertise from "./parts/our-expertise";
 import DiscoverSpaces from './parts/discover-spaces'
 import Panorama from "./parts/panorama";
+import Neighbors from "./parts/neighbors";
 
 export default function Homepage() {
   return (
@@ -73,6 +74,9 @@ export default function Homepage() {
         <DiscoverSpaces />
       </div>
       <Panorama />
+      <div className="py-5 px-[50px]">
+        <Neighbors/>
+      </div>
     </div>
   )
 }
