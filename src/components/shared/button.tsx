@@ -8,6 +8,7 @@ type ButtonProps = {
   roundedFull?: boolean; // For rounded corners (default: false)
   disabled?: boolean;
   className?: string; // For custom classes
+  enableGlassEffect?: boolean; // For adding a glass-like effect (default: false)
 };
 
 export default function Button({
@@ -18,9 +19,10 @@ export default function Button({
   roundedFull = false,
   disabled = false,
   className = "",
+  enableGlassEffect = false,
 }: ButtonProps){
   // Base styles
-  const baseStyles = `${roundedFull ? '!rounded-full' : ''} inline-flex items-center justify-center font-medium rounded focus:outline-none focus:ring disabled:opacity-50 disabled:cursor-not-allowed`;
+  const baseStyles = `${roundedFull ? '!rounded-full' : ''} ${enableGlassEffect ? "backdrop-blur-xl" : ""} inline-flex items-center justify-center font-medium rounded focus:outline-none focus:ring disabled:opacity-50 disabled:cursor-not-allowed`;
 
   // Variants
   const variantStyles = {
