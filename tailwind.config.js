@@ -18,7 +18,7 @@ export default {
       grey: '#E8E8E8',
       lightgrey: '#828282',
       darkgray: '#2F2F2F',
-      lightblack: '#25170B',
+      lightblack: '#2F2F2F',
       black: '#000000',
       white: '#FFFFFF',
       transparent: "transparent",
