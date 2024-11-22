@@ -73,6 +73,7 @@ export default function Homepage() {
 
         <DiscoverSpaces />
       </div>
+      <div className="p-10"></div>
       <Panorama />
       <div className="py-5 px-[50px]">
         <Neighbors/>
