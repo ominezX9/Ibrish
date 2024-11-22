@@ -5,7 +5,7 @@ import MenuBar from "@components/menu-bar";
 
 export default function DefaultLayout() {
     return (
-        <div className="flex overflow-hidden h-[100vh] w-full">
+        <div className="w-full">
             <MenuBar />
             <div className="w-full">
                 {/* <Header /> */}
