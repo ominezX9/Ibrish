@@ -19,4 +19,12 @@ body{
     .text-baleny{
         font-family: Baleny;
     }
+    #panorama{
+        width: 100% !important;
+        height: 100% !important;
+
+    }
+    #panorama .pnlm-controls-container{
+        display: none;
+    }
 }
