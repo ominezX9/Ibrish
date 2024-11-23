@@ -32,11 +32,12 @@ export default function Panorama() {
             </div>
             <div className="bg-primary">
                 <div className="relative bg-secondary h-[450px] overflow-hidden">
-                  <div className="absolute block z-[10] left-0 right-0 -top-[100px] rotate-180 bg-blue">
+                  {/* <div className="absolute block z-[10] left-0 right-0 -top-[100px] rotate-180 bg-blue">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                         <path fill="#ffffffff" fill-opacity="1" d="M0,192L120,170.7C240,149,480,107,720,106.7C960,107,1200,149,1320,170.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
                       </svg>
-                    </div>
+                    </div> */}
+                    <div className="absolute -top-8 z-[3] bow-curve rotate-180"></div>
                     <ReactPannellum
                         key={image}
                         id="panorama"
@@ -53,7 +54,7 @@ export default function Panorama() {
                         }}
                     />
                     <Link
-                      className="absolute hover:bg-black hover:text-white items-center rounded-full bottom-10 left-1/2 -translate-x-1/2 z-[15] flex flex-row border-2 border-black py-2 px-5 gap-3"
+                      className="absolute hover:bg-black hover:text-white items-center rounded-full bottom-2 left-1/2 -translate-x-1/2 z-[15] flex flex-row border-2 border-black py-2 px-5 gap-3"
                       to="/">
                         <span>
                           See our 360&deg; view
@@ -62,11 +63,13 @@ export default function Panorama() {
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 7C6.48 7 2 9.24 2 12c0 2.24 2.94 4.13 7 4.77V20l4-4-4-4v2.73c-3.15-.56-5-1.9-5-2.73 0-1.06 3.04-3 8-3s8 1.94 8 3c0 .73-1.46 1.89-4 2.53v2.05c3.53-.77 6-2.53 6-4.58 0-2.76-4.48-5-10-5z"></path></svg>
                         </span>
                     </Link>
-                    <div className="absolute block z-[10] left-0 right-0 -bottom-10 bg-blue">
+                    {/* <div className="absolute block z-[10] left-0 right-0 -bottom-10 bg-blue">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                         <path fill="#ffffffff" fill-opacity="1" d="M0,192L120,170.7C240,149,480,107,720,106.7C960,107,1200,149,1320,170.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
                       </svg>
-                    </div>
+                    </div> */}
+                    <div className="absolute -bottom-8 z-[3] bow-curve "></div>
+
                 </div>
                 
             </div>

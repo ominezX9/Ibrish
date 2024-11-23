@@ -17,12 +17,27 @@ body {
 }
 
 @layer {
-    img{
+    img {
         width: 100%;
     }
+
     .text-baleny {
         font-family: Baleny;
     }
+
+    .bow-curve {
+        width: 100%;
+        /* Width of the curve */
+        height: 100px;
+        /* Height of the curve */
+        background: #fff;
+        /* Curve color */
+        border-radius: 100% 100% 0 0;
+        /* Top half of an oval shape */
+        margin: 0 auto;
+        /* Center it horizontally */
+    }
+
 
     #panorama {
         width: 100% !important;
