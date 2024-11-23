@@ -17,7 +17,7 @@ export default function Homepage() {
       <div className="py-5 px-[50px]">
         <div className="mb-10">
           <Jumbotron
-            className="bg-[#dceeff] !p-0 !m-0 h-[850px]"
+            className="!bg-[#dceeff] !p-0 !m-0 h-[850px]"
             children={
               <div className="relative h-full">
                 <div className="flex flex-row justify-center items-center">
