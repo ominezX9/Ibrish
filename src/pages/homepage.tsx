@@ -15,18 +15,18 @@ import Filter from "@components/shared/filter";
 export default function Homepage() {
   return (
     <div>
-      <div className="py-5 px-[50px]">
+      <div className="sm:py-5 py-3 sm:px-[50px] px-[20px]">
         <div className="mb-10">
           <Jumbotron
-            className="!bg-[#dceeff] !p-0 !m-0 h-[850px]"
+            className="!bg-[#dceeff] !p-0 !m-0 lg:h-[850px] md:h-[700px] h-[450px]"
             children={
               <div className="relative h-full">
                 <div className="flex flex-row justify-center items-center">
                   <div className="flex relative top-12 flex-col items-center z-[2]">
-                    <h1 className="w-[450px] text-light text-center font-normal tracking-tighter text-5xl font-bold">
+                    <h1 className="w-[450px] text-light text-center font-normal tracking-tighter sm:text-5xl text-3xl font-bold">
                       Bringing <br /> Your <span className="text-primary">Construction</span> <br />Ideas to Life
                     </h1>
-                    <p className="text-sm text-center mt-3 w-[290px] font-light">
+                    <p className="sm:text-sm text-xs  text-center mt-3 sm:w-[290px] w-[220px] font-light">
                       Where it's custom home, a functional office space,
                       or a complete building solution we turn vision into reality
                     </p>
@@ -45,7 +45,9 @@ export default function Homepage() {
                   </div>
 
                 </div>
-                <Filter/>
+                <div className="lg:block md:block hidden">
+                  <Filter />
+                </div>
                 <img className="absolute bottom-0 left-0 right-0" src={HeroImage} alt="" />
               </div>
 
@@ -53,9 +55,9 @@ export default function Homepage() {
           />
         </div>
         <div className="mb-10">
-          <h2 className="tracking-tighter text-3xl text-center pb-5">Discover Your Perfect Home - <br />Comfort and Convenience Await!</h2>
+          <h2 className="tracking-tighter sm:text-3xl text-2xl text-center pb-5">Discover Your Perfect Home - <br />Comfort and Convenience Await!</h2>
           <Jumbotron
-            className="h-[500px] !p-0 !m-0 text-cream"
+            className="lg:h-[500px] md:h-[290px] h-[160px] !p-0 !m-0 text-cream"
             children={
               <div className="relative h-full">
                 <div className="absolute left-10 bottom-10 right-10">
@@ -93,7 +95,7 @@ export default function Homepage() {
       </div>
       <div className="p-10"></div>
       <Panorama />
-      <div className="py-5 px-[50px]">
+      <div className="py-5 sm:px-[50px] px-[20px]">
         <Neighbors />
       </div>
       <Footer />

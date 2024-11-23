@@ -4,9 +4,9 @@ import Logo from "@assets/images/vector/logo.svg";
 export default function Footer() {
     return (
         <div className="flex flex-col gap-4 bg-lightblack text-white py-10 px-[50px]">
-            <div className="top flex flex-row items-center bg-white/5 py-3 px-10 border border-white rounded-lg">
+            <div className="top flex lg:flex-row flex-col items-center bg-white/5 py-3 px-10 border border-white rounded-lg">
                 <div className='basis-[70%]'>
-                    <h1 className="text-lg ">Ready to Build Your Dream Home? Let's Make It Happen!</h1>
+                    <h1 className="lg:text-lg text-base font-bold">Ready to Build Your Dream Home? Let's Make It Happen!</h1>
                 </div>
                 <div className="basis-[30%] flex flex-col">
                     <h3 className="text-sm">0708 848 7961, 0705 205 6006</h3>
@@ -18,10 +18,10 @@ export default function Footer() {
                 </div>
             </div>
             <hr className="border-white border-2 my-5"/>
-            <div className="info flex flex-row justify-between">
+            <div className="info flex sm:flex-row flex-col justify-between">
                 <div className="logo basis-[30%]">
-                    <div className="sm:w-[150px] w-[200px]">
-                    <img src={Logo} alt="" />
+                    <div className="lg:w-[200px] md:w-[150px] w-[220px] sm:mb-0 mb-5">
+                        <img src={Logo} alt="" />
                     </div>
                 </div>
                 <div className="links basis-[60%] flex flex-row justify-between items-end">

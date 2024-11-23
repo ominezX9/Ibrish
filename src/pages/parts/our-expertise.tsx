@@ -3,24 +3,24 @@ import Man from "@assets/images/man-on-call.png"
 
 export default function OurExpertise() {
   return (
-    <div className="flex flex-row justify-between pb-10 mb-10">
+    <div className="flex lg:flex-row flex-col justify-between pb-10 mb-10">
           <div className="flex flex-col basis-[45%] flex-none">
-            <Jumbotron className="!p-0 !m-0 h-[360px]" children={
+            <Jumbotron className="!p-0 !m-0 sm:h-[360px]" children={
               <>
                 <img src={Man} alt="" />
               </>
             }/>
             <div>
-              <h3 className="text-md text-primary tracking-widest py-7 pb-4">
+              <h3 className="text-md text-primary tracking-widest py-5 pb-4">
                 OUR EXPERTISE
               </h3>
-              <div className="text-2xl ">
+              <div className="text-2xl lg:mb-0 mb-4">
                 Masters of Innovation, <br/>
                 Builders of Excellence
               </div>
             </div>
           </div>
-          <div className="flex flex-col basis-[50%] gap-5">
+          <div className="flex flex-col basis-[50%] lg:gap-5 gap-3">
             {
               [
                 {
@@ -43,8 +43,8 @@ export default function OurExpertise() {
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                    <p className="leading-9">{item.description}</p>
+                    <h3 className="font-bold text-lg lg:mb-2 mb-1">{item.title}</h3>
+                    <p className="lg:leading-9 leading-7">{item.description}</p>
                   </div>
                 </div>
               ))

@@ -19,14 +19,13 @@ export default function Panorama() {
 
     return (
         <div>
-            <h1 className="text-4xl text-center p-5 pt-10 mb-5 leading-10">
+            <h1 className="xl:text-4xl lg:text-4xl md:text-3xl text-2xl text-center p-5 pt-10 mb-5 leading-10">
                 Experience Every Angle <br />
                 With the <span className="text-primary">360&#xb0;</span> Camera
             </h1>
             <div>
                 {/* Pass setImage to Tabs */}
                 <Tabs tabs={tabsData} setContent={(content) => {
-                  console.log(content)
                   setImage(content)
                 }} />
             </div>
@@ -37,7 +36,7 @@ export default function Panorama() {
                         <path fill="#ffffffff" fill-opacity="1" d="M0,192L120,170.7C240,149,480,107,720,106.7C960,107,1200,149,1320,170.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
                       </svg>
                     </div> */}
-                    <div className="absolute -top-8 z-[3] bow-curve rotate-180"></div>
+                    <div className="absolute -top-10 z-[3] bow-curve rotate-180"></div>
                     <ReactPannellum
                         key={image}
                         id="panorama"
@@ -54,7 +53,7 @@ export default function Panorama() {
                         }}
                     />
                     <Link
-                      className="absolute hover:bg-black hover:text-white items-center rounded-full bottom-2 left-1/2 -translate-x-1/2 z-[15] flex flex-row border-2 border-black py-2 px-5 gap-3"
+                      className="absolute hover:bg-black hover:text-white items-center rounded-full bottom-2 left-1/2 -translate-x-1/2 z-[15] flex flex-row border-2 border-black py-2 lg:px-5 md:px-3 px-2 gap-3"
                       to="/">
                         <span>
                           See our 360&deg; view
