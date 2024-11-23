@@ -10,6 +10,7 @@ import Neighbors from "./parts/neighbors";
 import Footer from "./parts/footer";
 import HeroImage from "@assets/images/home-header.png"
 import HeroImage2 from "@assets/images/home-header-2.png";
+import Filter from "@components/shared/filter";
 
 export default function Homepage() {
   return (
@@ -44,6 +45,7 @@ export default function Homepage() {
                   </div>
 
                 </div>
+                <Filter/>
                 <img className="absolute bottom-0 left-0 right-0" src={HeroImage} alt="" />
               </div>
 

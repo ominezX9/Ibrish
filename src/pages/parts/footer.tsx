@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import Logo from "@assets/images/vector/logo.svg";
 
 export default function Footer() {
     return (
@@ -20,7 +20,9 @@ export default function Footer() {
             <hr className="border-white border-2 my-5"/>
             <div className="info flex flex-row justify-between">
                 <div className="logo basis-[30%]">
-
+                    <div className="sm:w-[150px] w-[200px]">
+                    <img src={Logo} alt="" />
+                    </div>
                 </div>
                 <div className="links basis-[60%] flex flex-row justify-between items-end">
                     <div className="text-xs">

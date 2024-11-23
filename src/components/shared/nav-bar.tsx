@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import useDeviceType from "@utils/get-device-type";
+import Logo from "@assets/images/vector/logo.svg";
 export default function Navbar() {
   const deviceType = useDeviceType();
   const options = [
@@ -11,17 +12,25 @@ export default function Navbar() {
     "Contact"
   ]
   const [selected, setSelected] = useState(0);
-
+  const [open, setOpen ] = useState(false);
   return (
-    <div className={`bg-white z-[20] ${deviceType === "phone" ? "absolute bottom-0 left-0 top-0 " : ""}`}>
+    <div className={`bg-white z-[20] ${deviceType === "phone" ? `fixed bottom-0 ${open ? "left-0" : "-left-[320px]"} w-[300px] top-0 ` : ""}`}>
       {
         deviceType === "phone" ? (
           <div>
-            <ul className="flex justify-between align-center py-5 px-20">
+            <div className="flex">
+              <div className="logo w-[120px] p-5">
+                <img src={Logo} alt="logo" />
+              </div>
+              <div onClick={() => setOpen(false)}>
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+              </div>
+            </div>
+            <ul className="mt-[100px] flex flex-col align-center py-5 px-20">
               {
                 options.map((item, i) => (
                   <Link
-                    className={`text-gray hover:text-secondary border-2 border-transparent hover:border-secondary transition-all rounded-lg flex-none flex items-center justify-center shadow w-[40px] h-[40px] p-2 ${selected == i ? "!text-secondary !border-secondary" : ""}`}
+                    className={`text-gray hover:text-primary mb-2 border-transparent hover:border-primary transition-all rounded-lg flex-none flex items-center justify-center p-2 ${selected == i ? "!bg-primary !text-white" : ""}`}
                     key={i}
                     to={`/${item}`}>
                     {item}
@@ -32,11 +41,11 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="bg-white">
-            <ul className="flex gap-3">
+            <ul className="flex gap-2">
               {
                 options.map((item, i) => (
                   <Link
-                    className={`text-gray hover:text-primary hover:border-secondary transition-all flex-none flex items-center justify-center px-2 py-1 ${selected == i ? "!text-white bg-primary" : ""}`}
+                    className={`text-gray hover:text-primary hover:border-secondary transition-all flex-none flex items-center justify-center px-4 py-1 ${selected == i ? "!text-white bg-primary rounded-lg" : ""}`}
                     key={i}
                     to={`/${item.toLowerCase().replace(" ", "-")}`}
                     onClick={() => { setSelected(i) }}>
